@@ -1,13 +1,10 @@
 <!doctype html>
 <!-- simple.html -->
+
 <html lang="en">
     
     <head>
-		<?php 
 		
-		session_start();
-		
-		?>
 		
         <meta charset="utf-8">
         <title>Cookie Cutter</title>
@@ -19,13 +16,13 @@
         
     </head>
         <div id="picture1">
-            <img src= "cookielogo.gif" alt="cookiecutter logo" >
+            <img src= "og-generic_02031d2b.png" alt="Starwars" width="100" height="100">
         </div>
         
     <h2>
         <br>
 		
-        <div id="bigspace">Welcome <?php if (isset($_SESSION['username'])) {print $_SESSION['username']; } ?> to Cookie Cutter.com</div>
+        <div id="bigspace">Welcome to Cookie Cutter.com</div>
         
         <div id="italictxt"> "Cookie Cutter.com is dedicated to our customers unique cookie cutting needs."  </div>
     </h2>
@@ -36,43 +33,22 @@
         <div id="menulist">
 		<br>
 		<br>
-			<?php if (isset($_SESSION['auth']) && $_SESSION['auth'] >= 1) { ?>
+		
 				<ul>
 					<li class="medium1"> Site Menu: </li>  
 					<br>
-					<li class="small1"><a href="index.php"> Home</a></li> 
+					<li class="small1"><a href="index.php"> Home </a></li> 
 					<br>
-					<li class="small1"><a href="AboutUS.php"> About US </a></li> 
+					<li class="small1"><a href="characters.php"> StarWars Characters </a></li> 
 					<br>
-					<li class="small1"><a href="FAQs.php"> FAQ's </a></li> 
+					<li class="small1"><a href="planets.php"> StarWars Planets </a></li> 
 					<br>
-					<li class="small1"><a href="misc.php"> News </a></li>
+					<li class="small1"><a href="ships.php"> StarWars Ships </a></li>
 					<br>
-					<li class="small1"><a href="misc.php"> Member Rebates </a></li>
+					<li class="small1"><a href="weapons.php"> StarWars Weapons </a></li>
 					
-					<?php if($_SESSION['auth'] == 5){ // if security clearance of level 5 then show admin link ?>
-					<br>
-					<li class="small1"><a href="administration.php"> Administration </a></li>
-					<?php } ?>
-					
-					<br>
-					<li class="small1"><a href="Logoff.php"> LOGOFF </a></li>
+				
 				</ul>
-			<?php } else { ?>
-				<ul>
-					<li class="medium1"> Site Menu: </li>  
-					<br>
-					<li class="small1"><a href="index.php"> Home</a></li> 
-					<br>
-					<li class="small1"><a href="AboutUS.php"> About US </a></li> 
-					<br>
-					<li class="small1"><a href="FAQs.php"> FAQ's </a></li> 
-					<br>
-					<li class="small1"><a href="JoinToday.php"> Join Today!</a></li> 
-					<br>
-					<li class="small1"><a href="login.php"> Login </a></li> 
-				</ul>
-			<?php } ?>
         </div>
         <div id="box">
             <br>
@@ -81,7 +57,7 @@
             Featured Cookie Cutter of the Week
             <br>
             <br>
-            <img src="weeklyspec.jpg">
+            <img src="join-the-dark-side-we-have-cookies-welcome-to-the-13906531.png">
             <br>
             Impress your friends with this cool mouse faced cookie cutter! Join today for more awesome cookie cutter designs!
         </div>
@@ -89,6 +65,8 @@
         <br>
         <br>
         <hr>
+			
+		
     </body>
 <html>
     
