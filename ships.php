@@ -6,12 +6,17 @@
  $db = mysqli_connect('classmysql.engr.oregonstate.edu','cs340_wallerir','9958','cs340_wallerir')
  or die('Error connecting to MySQL server.');
 ?>
-
+<script>
+	if( window.history.replaceState)
+	{
+		window.history.replaceState(null, null, window.location.href);
+	}
+</script>
 <html lang="en">
     
     <head>
         <meta charset="utf-8">
-        <title>Cookie Cutter</title>
+        <title>Starwars Ships</title>
         <link rel="stylesheet" href="css/CSSStuff.css">
         
         
@@ -23,8 +28,8 @@
     <h2>
         <br>
         <div align="center">STARWARS SHIPS</div>
-        
-        
+        <div align="center">CSS COMING SOON    -RYAN </div>
+      
     </h2>
     <br>
     <hr>
@@ -54,6 +59,7 @@
 		<br>
 		<br>
 		<br>
+		<div align="left">Add Ship</div>
 		<div>
 			<?php  
 			//Step2
@@ -63,10 +69,34 @@
 			//Step3
 			$result = mysqli_query($db, $query);
 			$row = mysqli_fetch_array($result);
-
-			while ($row = mysqli_fetch_array($result)) {
-			echo $row['VIN Number'] . ' | ' . $row['Name'] . ' | ' . $row['Type'] . ' | ' . $row['Owner'] . ' | ' . $row['Weapon'] . ' | ' . $row['Speed'] . ' | ' . $row['Model'] .'<br />';
+			
+			echo "<table border=1>";
+			echo "<tr>";
+			echo "<th>VIN number</th>";
+			echo "<th>Name</th>";
+			echo "<th>Type</th>";
+			echo "<th>Owner</th>";
+			echo "<th>Weapon</th>";
+			echo "<th>Speed</th>";
+			echo "<th>Model</th>";
+			echo "</tr>";
+			
+			while($row = mysqli_fetch_array($result)){
+				
+				echo "<tr>";
+				echo "<td>" .$row['VIN Number']. "</td>";
+				echo "<td>" .$row['Name']. "</td>";
+				echo "<td>" .$row['Type']. "</td>";
+				echo "<td>" .$row['Owner']. "</td>";
+				echo "<td>" .$row['Weapon']. "</td>";
+				echo "<td>" .$row['Speed']. "</td>";
+				echo "<td>" .$row['Model']. "</td>";
+				echo "</tr>";
 			}
+			
+			echo "</table>";
+			
+			
 			?>
 		</div>
         <br>
@@ -89,7 +119,7 @@
 				//$stmt->bind_param("ssss", $_POST['name'], $_POST['homePlanet'], $_POST['Race'], $_POST['ID']);
 				
 				mysqli_query($db, $sql) or die("Error: " . $sql . "<br>" . $db->error);
-				
+				echo '<meta http-equiv="refresh" content="0" />';
 				mysqli_close($db);
 			}
 			?>

@@ -6,12 +6,17 @@
  $db = mysqli_connect('classmysql.engr.oregonstate.edu','cs340_wallerir','9958','cs340_wallerir')
  or die('Error connecting to MySQL server.');
 ?>
-
+<script>
+	if( window.history.replaceState)
+	{
+		window.history.replaceState(null, null, window.location.href);
+	}
+</script>
 <html lang="en">
     
     <head>
         <meta charset="utf-8">
-        <title>Cookie Cutter</title>
+        <title>Starwars Planets</title>
         <link rel="stylesheet" href="css/CSSStuff.css">
         
         
@@ -23,8 +28,7 @@
     <h2>
         <br>
         <div align="center">STARWARS PLANETS</div>
-        
-        
+        <div align="center">CSS COMING SOON    -RYAN </div>
     </h2>
     <br>
     <hr>
@@ -61,13 +65,32 @@
 			//Step3
 			$result = mysqli_query($db, $query);
 			$row = mysqli_fetch_array($result);
-
-			while ($row = mysqli_fetch_array($result)) {
-				echo $row['Name'] . ' | ' . $row['ID'] . ' | ' . $row['System'] . ' | ' . $row['Biome'] . ' | ' . $row['Population'] .'<br />';
+			
+			echo "<table border=1>";
+			echo "<tr>";
+			echo "<th>Name</th>";
+			echo "<th>ID</th>";
+			echo "<th>System</th>";
+			echo "<th>Biome</th>";
+			echo "<th>Population</th>";
+			echo "</tr>";
+			
+			while($row = mysqli_fetch_array($result)){
+				
+				echo "<tr>";
+				echo "<td>" .$row['Name']. "</td>";
+				echo "<td>" .$row['ID']. "</td>";
+				echo "<td>" .$row['System']. "</td>";
+				echo "<td>" .$row['Biome']. "</td>";
+				echo "<td>" .$row['Population']. "</td>";
+				echo "</tr>";
 			}
+			echo "</table>";
+			
 			?>
 		</div>
         <br>
+		<div align="left">Add Planet</div>
 		<div>
 			<?php
 			$nameVar   = $_POST['name']; 
@@ -84,7 +107,7 @@
 				//$stmt->bind_param("ssss", $_POST['name'], $_POST['homePlanet'], $_POST['Race'], $_POST['ID']);
 				
 				mysqli_query($db, $sql) or die("Error: " . $sql . "<br>" . $db->error);
-				
+				echo '<meta http-equiv="refresh" content="0" />';
 				mysqli_close($db);
 			}
 			?>

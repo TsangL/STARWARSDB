@@ -6,12 +6,17 @@
  $db = mysqli_connect('classmysql.engr.oregonstate.edu','cs340_wallerir','9958','cs340_wallerir')
  or die('Error connecting to MySQL server.');
 ?>
-
+<script>
+	if( window.history.replaceState)
+	{
+		window.history.replaceState(null, null, window.location.href);
+	}
+</script>
 <html lang="en">
     
     <head>
         <meta charset="utf-8">
-        <title>Cookie Cutter</title>
+        <title>Starwars Weapons</title>
         <link rel="stylesheet" href="css/CSSStuff.css">
         
         
@@ -23,8 +28,8 @@
     <h2>
         <br>
         <div align="center">STARWARS WEAPONS</div>
-        
-        
+        <div align="center">CSS COMING SOON    -RYAN </div>
+       
     </h2>
     <br>
     <hr>
@@ -53,6 +58,7 @@
         </div>
 		<br>
 		<br>
+		
 		<div>
 			<?php  
 			//Step2
@@ -62,16 +68,38 @@
 			//Step3
 			$result = mysqli_query($db, $query);
 			$row = mysqli_fetch_array($result);
-
-			while ($row = mysqli_fetch_array($result)) {
-				echo $row['Serial'] . ' | ' . $row['Name'] . ' | ' . $row['Type'] . ' | ' . $row['Model'] .'<br />';
+			
+			echo "<table border=1>";
+			echo "<tr>";
+			echo "<th>Serial</th>";
+			echo "<th>Name</th>";
+			echo "<th>Type</th>";
+			echo "<th>Model</th>";
+			echo "</tr>";
+			
+			while($row = mysqli_fetch_array($result)){
+				
+				$serialVar = $row['Serial'];
+				$nameVar = $row['Name'];
+				$typeVar = $row['Type'];
+				$modelVar = $row['Model'];
+				
+				echo "<tr>";
+				echo "<td>" .$serialVar. "</td>";
+				echo "<td>" .$nameVar. "</td>";
+				echo "<td>" .$typeVar. "</td>";
+				echo "<td>" .$modelVar. "</td>";
+				echo "</tr>";
 			}
+			echo "</table>";
+			
 			?>
 		</div>
+		<br>
 		
-
+		
         <br>
-		
+		<div align="left">Add Weapon</div>
 			<?php
 			$nameVar   = $_POST['name']; 
 			$typeVar   = $_POST['type'] ;
@@ -87,8 +115,9 @@
 				//$stmt->bind_param("ssss", $_POST['name'], $_POST['homePlanet'], $_POST['Race'], $_POST['ID']);
 				
 				mysqli_query($db, $sql) or die("Error: " . $sql . "<br>" . $db->error);
-				
+				echo '<meta http-equiv="refresh" content="0" />';
 				mysqli_close($db);
+				
 			}
 			?>
 		

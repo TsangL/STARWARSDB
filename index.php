@@ -7,9 +7,12 @@
 
 
         <meta charset="utf-8">
-        <title>Cookie Cutter</title>
+        <title>Starwars</title>
+		<div align="center">CSS COMING SOON    -RYAN </div>
         <link rel="stylesheet" href="CSS/CSSStuff.css">
-
+		
+            <img src= "RYAN.PNG" alt="Starwars" class="center" height="200" width="200">
+        
         <style type="text/css">
 
         </style>
