@@ -22,45 +22,30 @@
     <head>
         <meta charset="utf-8">
         <title>Starwars Characters</title>
-        <link rel="stylesheet" href="css/CSSStuff.css">
+        <link rel="stylesheet" href="CSS/CSSStuff.css">
         
         
     </head>
-        <div id="picture1">
-            <img src= "og-generic_02031d2b.png" alt="Starwars" width="100" height="100">
+		
+		<div class="menulist">
+				<ul>
+					<li class="small1"><a href="index.php"> Home </a></li>
+					<li class="small1"><a href="characters.php"> StarWars Characters </a></li>					
+					<li class="small1"><a href="planets.php"> StarWars Planets </a></li>					
+					<li class="small1"><a href="ships.php"> StarWars Ships </a></li>					
+					<li class="small1"><a href="weapons.php"> StarWars Weapons </a></li>
+				</ul>
         </div>
         
     <h2>
         <br>
         <div align="center">STARWARS CHARACTERS</div>
-        <div align="center">CSS COMING SOON    -RYAN </div>
     </h2>
     <br>
     <hr>
     <br>
     <body>
-	
-        <div id="menulist">
-		<br>
-		<br>
-		
-				<ul>
-					<li class="medium1"> Site Menu: </li>  
-					<br>
-					<li class="small1"><a href="index.php"> Home </a></li> 
-					<br>
-					<li class="small1"><a href="characters.php"> StarWars Characters </a></li> 
-					<br>
-					<li class="small1"><a href="planets.php"> StarWars Planets </a></li> 
-					<br>
-					<li class="small1"><a href="ships.php"> StarWars Ships </a></li>
-					<br>
-					<li class="small1"><a href="weapons.php"> StarWars Weapons </a></li>
-				</ul>
-        </div>
-		<br>
-		<br>
-		<br>
+
 		<div>
 		
 			<?php  

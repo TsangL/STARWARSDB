@@ -1,47 +1,26 @@
-			h2 {text-align: center;}
-            #bigspace {letter-spacing: 3px;}
-            #italictxt {font-size: medium;
-                        font-style: italic;
-                        font-weight: normal;}
-            #picture1 {position: absolute;
-                       top: 8%;
-                       left: 20%;}
-			#picture2 {position: absolute;
-					   top: 27%;
-					   left: 60%;}
-            #menulist {position: absolute;
-                       top: 21%;
-                       left: 15%;
-                       text-align: left;
-                       }
-            ul  {list-style-type: none;
-                padding: 0;}
-            .medium1 {font-size: medium;
-                     font-weight: bold;}
-            .small1 {font-size: small;
-                     text-decoration: underline;
-                     color: grey;}
-            #box {border: 1px solid black;
-                  width: 700px;
-                  margin: auto;}
-            #partbox {border-top-style: solid;
-                      border-bottom-style: solid;
-                      border-top-color: black;
-                      border-bottom-color: black;
-                      border-width: 1px;
-                      width: 500px;
-                      margin: auto;
-					  line-height: 200%;
-			
-            }
-			#formloc {position: absolute;
-					  top:40%;
-					  left:57%;}
-			#smallGrey{color: grey;
-					   font-size: 10pt;}
-			#trademark{position: absolute;
-					   top: 70%;
-					   left: 70%;
-					   color: grey;
-					   font-size: 8pt;}
-            body {text-align: center;}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.small1 {
+    float: left;
+}
+
+.small1 a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+/* Change the link color to #111 (black) on hover */
+
+.small1 a:hover {
+    background-color: #111;
+}
