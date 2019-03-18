@@ -22,7 +22,44 @@
     <head>
         <meta charset="utf-8">
         <title>Starwars Characters</title>
-        <link rel="stylesheet" href="CSS/CSSStuff.css">
+		<link rel="stylesheet" href="CSS/CSSStuff.css">
+		<style type="text/css">
+			table {
+			margin: 8px;
+			padding:10px; 
+			}
+
+			th {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: .7em;
+			background: #666;
+			color: #FFF;
+			padding: 2px 6px;
+			border-collapse: separate;
+			border: 1px solid #000;
+			color: white;
+			}
+
+			td {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: .7em;
+			border: 1px solid #DDD;
+			color: white;
+			background-color: black;
+			}
+			label {
+			color: white;
+			margin: 5px;
+			}
+			input[type=text] {
+			box-sizing: border-box;
+			}
+			form {
+				background-color: red;
+				width: 10%;
+				margin: 5px;
+			}
+		</style>
         
         
     </head>
@@ -38,15 +75,12 @@
         </div>
         
     <h2>
-        <br>
         <div align="center">STARWARS CHARACTERS</div>
     </h2>
-    <br>
-    <hr>
-    <br>
-    <body>
 
-		<div>
+    <body background="StarWars.jpg">
+
+		<div align="center">
 		
 			<?php  
 			//Step2
@@ -58,7 +92,7 @@
 			$row = mysqli_fetch_array($result);
 			
 			
-			echo "<table border=1>";
+			echo '<table align="center">';
 			echo "<tr>";
 			echo "<th>Name</th>";
 			echo "<th>Home Planet</th>";
@@ -81,10 +115,9 @@
 			
 			?>
 		</div>
-        <br>
 		
-		<div align="left">Add Character</div>
-		<div>
+		<div align="center">Add Character</div>
+		<div align="center">
 			<?php
 			$nameVar = $_POST['name']; 
 			$homeVar = $_POST['homePlanet'];
@@ -143,8 +176,8 @@
 		<br>
 		<br>
 		<br>
-		<div align="left">Remove Character</div>
-		<div>
+		<div align="center">Remove Character</div>
+		<div align="center">
 			<?php
 			$NameVar = $_POST['Name']; 
 		
@@ -173,8 +206,8 @@
 		
 		<br>
 		<br>
-		<div align="left">Update Character</div>
-		<div>
+		<div align="center">Update Character</div>
+		<div align="center">
 			<?php
 			$cnameVar = $_POST['cname']; 	
 			$newNameVar = $_POST['nName'];
@@ -214,7 +247,6 @@
 		</div>
 		
         <br>
-        <hr>
     </body>
 <html>
     

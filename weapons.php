@@ -17,7 +17,38 @@
     <head>
         <meta charset="utf-8">
         <title>Starwars Weapons</title>
-        <link rel="stylesheet" href="CSS/CSSStuff.css">
+		<link rel="stylesheet" href="CSS/CSSStuff.css">
+		<style type="text/css">
+			table {
+			margin: 8px;
+			padding:10px; 
+			}
+
+			th {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: .7em;
+			background: #666;
+			color: #FFF;
+			padding: 2px 6px;
+			border-collapse: separate;
+			border: 1px solid #000;
+			color: white;
+			}
+			td {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: .7em;
+			border: 1px solid #DDD;
+			color: white;
+			background-color: black;
+			}
+			label {
+			color: white;
+			}
+			form {
+				background-color: red;
+				width: 10%;
+			}
+		</style>
         
         
 	</head>
@@ -36,11 +67,10 @@
         <br>
         <div align="center">STARWARS WEAPONS</div>   
 	</h2>
-	<hr>
 
-    <body>
+    <body background="StarWars.jpg">
 		
-		<div>
+		<div align="center">
 			<?php  
 			//Step2
 			$query = "SELECT * FROM sw_weapons";
@@ -80,7 +110,8 @@
 		
 		
         <br>
-		<div align="left">Add Weapon</div>
+		<div align="center">Add Weapon</div>
+		<div align="center">
 			<?php
 			$nameVar   = $_POST['name']; 
 			$typeVar   = $_POST['type'] ;
@@ -115,9 +146,9 @@
 				<button type="submit" name="Submit">Submit</button>
 			</form>
 		</div>
+		</div>
 		
         <br>
-        <hr>
     </body>
 <html>
     
