@@ -107,6 +107,7 @@
 				echo "<td>" .$row['pName']. "</td>";
 				echo "<td>" .$row['Race']. "</td>";
 				echo "<td>" .$row['cID']. "</td>";
+				//echo "<td>"  .    . "</td>";
 				echo "</tr>";
 			}
 			echo "</table>";
@@ -142,7 +143,7 @@
 			<label id="name"> Name: </label><br/>
 			<input type="text" name="name"  />
 			<br>
-			<label id="home"> Home Planet ID: </label><br/>
+			<label id="home"> Home Planet: </label><br/>
 			
 			<?php
 			//Step2
@@ -197,7 +198,7 @@
 			?>
 			
 			<form method="post" action="characters.php" >
-				<label id="Name"> Name: </label><br/> 
+				<label id="Name"> Full Name: </label><br/> 
 				<input type="text" name="Name"  />
 				
 				<button type="submit" name="submit">Submit</button>
@@ -228,6 +229,7 @@
 				mysqli_close($db);
 			}
 			?>
+			
 			
 			<form method="post" action="characters.php" >
 				<label id="Name"> Original Name: </label><br/> 
